@@ -17,12 +17,12 @@ if nilai:
     nilai_tertinggi = max(nilai)
     nilai_terendah = min(nilai)
 
-    max_index = nilai.index(nilai_tertinggi)
-    min_index = nilai.index(nilai_terendah)
+    index_nilai_tertinggi = nilai.index(nilai_tertinggi)
+    index_nilai_terendah = nilai.index(nilai_terendah)
 
     print(
-        f"Mahasiswa dengan nilai tertinggi: {nama[max_index]} dengan nilai {nilai_tertinggi}")
+        f"Mahasiswa dengan nilai tertinggi: {nama[index_nilai_tertinggi]} dengan nilai {nilai_tertinggi}")
     print(
-        f"Mahasiswa dengan nilai terendah: {nama[min_index]} dengan nilai {nilai_terendah}")
+        f"Mahasiswa dengan nilai terendah: {nama[index_nilai_terendah]} dengan nilai {nilai_terendah}")
 else:
     print("Tidak ada data nilai yang dimasukkan.")

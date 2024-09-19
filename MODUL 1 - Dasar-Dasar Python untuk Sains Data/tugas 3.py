@@ -1,21 +1,21 @@
-saldo_awal = 500000
+saldo_awal = 1000000
 pin_terdaftar = "1234"
-max_attempts = 3
+batas_percobaan = 3
 
 
 def atm_simulation():
-    attempts = 0
-    while attempts < max_attempts:
+    percobaan = 0
+    while percobaan < batas_percobaan:
         pin = input("Masukkan PIN Anda: ")
         if pin == pin_terdaftar:
             print("PIN Benar.")
             break
         else:
-            attempts += 1
+            percobaan += 1
             print(
-                f"PIN Salah. Anda memiliki {max_attempts - attempts} percobaan lagi.")
+                f"PIN Salah. Anda memiliki {batas_percobaan - percobaan} percobaan lagi.")
 
-        if attempts == max_attempts:
+        if percobaan == batas_percobaan:
             print("Anda telah melebihi batas percobaan PIN. Transaksi diblokir.")
             return
 
