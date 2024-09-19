@@ -20,15 +20,16 @@ def atm_simulation():
             return
 
     global saldo_awal
-    try:
-        jumlah_tarik = int(input("Masukkan jumlah penarikan: "))
-    except ValueError:
-        print("Input tidak valid, masukkan angka.")
-        return
+    print(f"Saldo Anda: Rp{saldo_awal}")
+    while True:
+        try:
+            jumlah_tarik = int(input("Masukkan jumlah penarikan: "))
+            break
+        except ValueError:
+            print("Input tidak valid, masukkan angka.")
 
     if jumlah_tarik > saldo_awal:
         print("Saldo tidak mencukupi untuk melakukan penarikan.")
-        return
     else:
         saldo_awal -= jumlah_tarik
         print(f"Penarikan berhasil. Saldo akhir Anda: Rp{saldo_awal}")
